@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <div class="rating-container container">
+        <div class="star-container">
+          <img
+            src="images/icon-star.svg"
+            alt="star-icon"
+            aria-hidden="true"
+            class="star-icon"
+          />
+        </div>
+        <h1 class="heading">How did we do?</h1>
+        <p class="rating-text text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <fieldset class="score-container">
+          <div>
+            <label
+              ><input type="radio" name="score" id="one" value="one" class="score"
+            /></label>
+          </div>
+          <div>
+            <label
+              ><input type="radio" name="score" id="two" value="two" class="score"
+            /></label>
+          </div>
+          <div>
+            <label
+              ><input type="radio" name="score" id="three" value="three" class="score"
+            /></label>
+          </div>
+          <div>
+            <label
+              ><input type="radio" name="score" id="four" value="four" class="score"
+            /></label>
+          </div>
+          <div>
+            <label
+              ><input type="radio" name="score" id="five" value="five" class="score"
+            /></label>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn">SUBMIT</button>
+      </div>
+      <div class="gratitude-container container">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="phone illustration"
+          aria-hidden="true"
+          class="phone-img"
+        />
+        <p class="selection">You selected [x] out of 5</p>
+        <h2 class="thanks">Thank you!</h2>
+        <p class="gratitude-text text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </main>
 
-</head>
-<body>
-<main>
-
-  <div class="rating-container container">
-    <img src="images/icon-star.svg" alt="star-icon" aria-hidden="true" class="star-icon">
-    <h1 class="heading">How did we do?</h1>
-    <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-    <div class="rating-container">
-      <div class="rating">1</div>
-      <div class="rating">2</div>
-      <div class="rating">3</div>
-      <div class="rating">4</div>
-      <div class="rating">5</div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/EnzoDev10">Enzo Cañete</a>.
     </div>
-    <button type="submit">SUBMIT</button>
-  </div>
-  <div class="gratitude-container container">
-    <img src="images/illustration-thank-you.svg" alt="phone illustration" aria-hidden="true" class="phone-img">
-    <p class="selection">You selected [x] out of 5</p>
-    <h2 class="thanks">Thank you!</h2>
-    <p class="gratitude-text">We appreciate you taking the time to give a rating. If you ever need more support, 
-      don’t hesitate to get in touch!</p>
-  </div>
-</main>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>
