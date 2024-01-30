@@ -32,7 +32,7 @@ html {
   main {
     background-color: @Dark-Blue;
     width: 21em;
-    height:21em;
+    height: 21em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,24 +144,6 @@ html {
         }
       }
     }
-
-    /*     .score {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: @Circle-color;
-      color: @White;
-      width: 40px;
-      line-height: 40px;
-      border-radius: 50%;
-      font-size: 12px;
-      transition: background-color 0.5s;
-
-
-      &:hover {
-        background-color: @Light-Grey;
-      }
-    } */
   }
 
   .btn {
@@ -176,6 +158,10 @@ html {
     &:hover {
       background-color: @White;
       color: @Orange;
+    }
+
+    &:active {
+      transform: translateY(-10px);
     }
   }
 }

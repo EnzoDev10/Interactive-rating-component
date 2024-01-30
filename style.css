@@ -106,23 +106,6 @@ html main .gratitude-container {
 .rating-container .score-container {
   display: flex;
   justify-content: space-between;
-  /*     .score {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: @Circle-color;
-      color: @White;
-      width: 40px;
-      line-height: 40px;
-      border-radius: 50%;
-      font-size: 12px;
-      transition: background-color 0.5s;
-
-
-      &:hover {
-        background-color: @Light-Grey;
-      }
-    } */
 }
 .rating-container .score-container .option {
   position: relative;
@@ -162,4 +145,7 @@ html main .gratitude-container {
 .rating-container .btn:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
+}
+.rating-container .btn:active {
+  transform: translateY(-10px);
 }
