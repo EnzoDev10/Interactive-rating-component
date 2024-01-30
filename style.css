@@ -52,7 +52,7 @@ html main .heading {
 }
 body main .text,
 html main .text {
-  color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
   font-size: 14px;
 }
 /* RATING CARD */
