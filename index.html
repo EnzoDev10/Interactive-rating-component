@@ -1,117 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Interactive rating component</title>
-  </head>
-  <body>
-    <main>
-      <div class="rating-container container">
-        <div class="star-container">
-          <img
-            src="images/icon-star.svg"
-            alt="star-icon"
-            aria-hidden="true"
-            class="star-icon"
-          />
-        </div>
-        <h1 class="heading">How did we do?</h1>
-        <p class="rating-text text">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <form class="score-container">
-          <div class="option-1 option">
-            <input
-              type="radio"
-              name="score"
-              id="one"
-              value="one"
-              class="score"
-            />
-            <label for="one">1</label>
-          </div>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Interactive rating component</title>
+	</head>
+	<body>
+		<main>
+			<div class="rating-container container">
+				<div class="star-container">
+					<img
+						src="images/icon-star.svg"
+						alt="star-icon"
+						aria-hidden="true"
+						class="star-icon"
+					/>
+				</div>
+				<h1 class="heading">How did we do?</h1>
+				<p class="rating-text text">
+					Please let us know how we did with your support request. All feedback
+					is appreciated to help us improve our offering!
+				</p>
+				<form id="score-form">
+					<fieldset>
+						<div class="option-1 option">
+							<input
+								type="radio"
+								name="score"
+								id="one"
+								value="1"
+								class="score"
+							/>
+							<label for="one">1</label>
+						</div>
+						<div class="option-2 option">
+							<input
+								type="radio"
+								name="score"
+								id="two"
+								value="2"
+								class="score"
+							/>
+							<label for="two">2</label>
+						</div>
+						<div class="option-3 option">
+							<input
+								type="radio"
+								name="score"
+								id="three"
+								value="3"
+								class="score"
+							/>
+							<label for="three">3</label>
+						</div>
+						<dv class="option-4 option">
+							<input
+								type="radio"
+								name="score"
+								id="four"
+								value="4"
+								class="score"
+							/>
+							<label for="four">4</label>
+						</dv>
+						<div class="option-5 option">
+							<input
+								type="radio"
+								name="score"
+								id="five"
+								value="5"
+								class="score"
+							/>
+							<label for="five">5</label>
+						</div>
+					</fieldset>
+					<button type="submit" class="btn">SUBMIT</button>
+				</form>
+			</div>
 
-          <div class="option-2 option">
-            <input
-              type="radio"
-              name="score"
-              id="two"
-              value="two"
-              class="score"
-            />
-            <label for="two">2</label>
-          </div>
+			<div class="gratitude-container container">
+				<img
+					src="images/illustration-thank-you.svg"
+					alt="phone illustration"
+					aria-hidden="true"
+					class="phone-img"
+				/>
+				<p class="selection"></p>
+				<h2 class="heading">Thank you!</h2>
+				<p class="gratitude-text text">
+					We appreciate you taking the time to give a rating. If you ever need
+					more support, don’t hesitate to get in touch!
+				</p>
+			</div>
+		</main>
 
-          <div class="option-3 option">
-            <input
-              type="radio"
-              name="score"
-              id="three"
-              value="three"
-              class="score"
-            />
-            <label for="three">3</label>
-          </div>
-
-          <dv class="option-4 option">
-            <input
-              type="radio"
-              name="score"
-              id="four"
-              value="four"
-              class="score"
-            />
-            <label for="four">4</label>
-          </dv>
-
-          <div class="option-5 option">
-            <input
-              type="radio"
-              name="score"
-              id="five"
-              value="five"
-              class="score"
-            />
-            <label for="five">5</label>
-          </div>
-        </form>
-        <button type="submit" class="btn">SUBMIT</button>
-      </div>
-
-
-      <div class="gratitude-container container">
-        <img
-          src="images/illustration-thank-you.svg"
-          alt="phone illustration"
-          aria-hidden="true"
-          class="phone-img"
-        />
-        <p class="selection">You selected [x] out of 5</p>
-        <h2 class="heading">Thank you!</h2>
-        <p class="gratitude-text text">
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
-      </div>
-    </main>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://www.frontendmentor.io/profile/EnzoDev10">Enzo Cañete</a>.
-    </div>
-  </body>
+		<div class="attribution">
+			<p>
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>.
+			</p>
+			<p>
+				Coded by
+				<a href="https://www.frontendmentor.io/profile/EnzoDev10">Enzo Cañete</a
+				>.
+			</p>
+		</div>
+	</body>
+	<script src="main.js"></script>
 </html>

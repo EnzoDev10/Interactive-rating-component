@@ -10,176 +10,198 @@
 @Orange: hsl(25, 97%, 53%);
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
-  color: @White;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Overpass", sans-serif;
+	color: @White;
 }
 
 /* GENERAL STYLES */
 
 body,
 html {
-  background-color: @Very-Dark-Blue;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	background-color: @Very-Dark-Blue;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  main {
-    background-color: @Dark-Blue;
-    width: 21em;
-    height: 21em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5%;
+	main {
+		background-color: @Dark-Blue;
+		width: 21em;
+		height: 21em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5%;
 
-    .container {
-      width: 85%;
-      height: 85%;
-    }
+		.container {
+			width: 85%;
+			height: 85%;
+		}
 
-    .heading {
-      font-size: 1.5em;
-    }
+		.heading {
+			font-size: 1.5em;
+		}
 
-    .text {
-      color: @Medium-Grey;
-      font-size: 15px;
-      text-align: center;
-    }
-  }
-}
-
-.attribution {
-  width: 90%;
-  position: relative;
-  top: 40px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 0.75em;
-  font-weight: 700;
-  color: @White;
-
-  a {
-    color: @Orange;
-    padding: 0 -0.25em;
-    margin: 0 -0.25em;
-    text-decoration: none;
-    box-shadow: inset 0 0 0 0;
-    color: @Medium-Grey;
-    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    &:hover,
-    &:focus {
-      outline: thin dotted;
-      color: @White;
-      box-shadow: inset 200px 0 0 0 @Orange;
-    }
-  }
+		.text {
+			color: @Medium-Grey;
+			font-size: 14px;
+		}
+	}
 }
 
 /* RATING CARD */
 
 .rating-container {
-  display: none; // * change to flex later
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-  .star-container {
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: @Circle-color;
-    border-radius: 100%;
-    padding: 10px;
+	.star-container {
+		width: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: @Circle-color;
+		border-radius: 100%;
+		padding: 10px;
 
-    .star-icon {
-      position: relative;
-      z-index: 2;
-      width: 14px;
-      height: 14px;
-    }
-  }
+		.star-icon {
+			position: relative;
+			z-index: 2;
+			width: 14px;
+			height: 14px;
+		}
+	}
 
-  .score-container {
-    display: flex;
-    justify-content: space-between;
+	#score-form {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
 
-    .option {
-      position: relative;
-      font-size: 12px;
-      color: @White;
-      background: @Circle-color;
-      transition: background-color 0.5s;
-      border-radius: 50%;
-      display: grid;
-      place-content: center;
+		fieldset {
+			display: flex;
+			justify-content: space-between;
+			border: none;
+		}
 
-      input[type="radio"] {
-        position: absolute;
-        appearance: none;
-      }
+		.option {
+			position: relative;
+			font-size: 12px;
+			color: @White;
+			background: @Circle-color;
+			transition: background-color 0.5s;
+			border-radius: 50%;
+			display: grid;
+			place-content: center;
 
-      input:checked + label {
-        background-color: @Orange;
-      }
+			input[type="radio"] {
+				position: absolute;
+				appearance: none;
+			}
 
-      label {
-        width: 40px;
-        line-height: 40px;
-        border-radius: 50%;
-        text-align: center;
+			input:checked + label {
+				background-color: @Orange;
+			}
 
-        &:hover {
-          background-color: @Light-Grey;
-        }
-      }
-    }
-  }
+			label {
+				width: 40px;
+				line-height: 40px;
+				border-radius: 50%;
+				text-align: center;
 
-  .btn {
-    background-color: @Orange;
-    color: @White;
-    border: none;
-    padding: 12px 0;
-    border-radius: 100px;
-    letter-spacing: 1px;
-    transition: all 0.5s;
+				&:hover {
+					background-color: @Light-Grey;
+				}
+			}
+		}
+	}
 
-    &:hover {
-      background-color: @White;
-      color: @Orange;
-    }
+	.btn {
+		background-color: @Orange;
+		color: @White;
+		border: none;
+		padding: 12px 0;
+		border-radius: 100px;
+		letter-spacing: 1px;
+		transition: all 0.5s;
 
-    &:active {
-      transform: translateY(-10px);
-    }
-  }
+		&:hover {
+			background-color: @White;
+			color: @Orange;
+		}
+
+		&:active {
+			transform: translateY(-10px);
+		}
+	}
 }
 
 /* GRATITUDE CARD */
 
 .gratitude-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 
-  .phone-img {
-    width: 140px;
+	.phone-img {
+		width: 140px;
+	}
+
+	.selection {
+		background-color: @Circle-color;
+		border-radius: 50px;
+		color: @Orange;
+		padding: 10px;
+		font-size: 15px;
+	}
+
+	.gratitude-text {
+		text-align: center;
+	}
+}
+
+.attribution {
+	width: 90%;
+	position: relative;
+	top: 40px;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 0.75em;
+	font-weight: 700;
+	color: @White;
+  
+  p {
+    margin: 10px 0;
   }
 
-  .selection {
-    background-color: @Circle-color;
-    border-radius: 50px;
-    color: @Orange;
-    padding: 10px 15px;
-    font-size: 15px;
-  }
+	a {
+		color: @Orange;
+		padding: 0 -0.25em;
+		margin: 0 -0.25em;
+		text-decoration: none;
+		box-shadow: inset 0 0 0 0;
+		color: @Medium-Grey;
+		transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			outline: thin dotted;
+			color: @White;
+			box-shadow: inset 200px 0 0 0 @Orange;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.attribution {
+		p {
+			display: inline;
+		}
+	}
 }

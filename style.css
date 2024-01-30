@@ -53,37 +53,11 @@ html main .heading {
 body main .text,
 html main .text {
   color: hsl(216, 12%, 54%);
-  font-size: 15px;
-  text-align: center;
-}
-.attribution {
-  width: 90%;
-  position: relative;
-  top: 40px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 0.75em;
-  font-weight: 700;
-  color: hsl(0, 0%, 100%);
-}
-.attribution a {
-  color: hsl(25, 97%, 53%);
-  padding: 0 -0.25em;
-  margin: 0 -0.25em;
-  text-decoration: none;
-  box-shadow: inset 0 0 0 0;
-  color: hsl(216, 12%, 54%);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.attribution a:hover,
-.attribution a:focus {
-  outline: thin dotted;
-  color: hsl(0, 0%, 100%);
-  box-shadow: inset 200px 0 0 0 hsl(25, 97%, 53%);
+  font-size: 14px;
 }
 /* RATING CARD */
 .rating-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -102,11 +76,17 @@ html main .text {
   width: 14px;
   height: 14px;
 }
-.rating-container .score-container {
+.rating-container #score-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.rating-container #score-form fieldset {
   display: flex;
   justify-content: space-between;
+  border: none;
 }
-.rating-container .score-container .option {
+.rating-container #score-form .option {
   position: relative;
   font-size: 12px;
   color: hsl(0, 0%, 100%);
@@ -116,20 +96,20 @@ html main .text {
   display: grid;
   place-content: center;
 }
-.rating-container .score-container .option input[type="radio"] {
+.rating-container #score-form .option input[type="radio"] {
   position: absolute;
   appearance: none;
 }
-.rating-container .score-container .option input:checked + label {
+.rating-container #score-form .option input:checked + label {
   background-color: hsl(25, 97%, 53%);
 }
-.rating-container .score-container .option label {
+.rating-container #score-form .option label {
   width: 40px;
   line-height: 40px;
   border-radius: 50%;
   text-align: center;
 }
-.rating-container .score-container .option label:hover {
+.rating-container #score-form .option label:hover {
   background-color: hsl(217, 12%, 63%);
 }
 .rating-container .btn {
@@ -150,10 +130,10 @@ html main .text {
 }
 /* GRATITUDE CARD */
 .gratitude-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .gratitude-container .phone-img {
   width: 140px;
@@ -162,6 +142,42 @@ html main .text {
   background-color: hsl(213, 19%, 21%);
   border-radius: 50px;
   color: hsl(25, 97%, 53%);
-  padding: 10px 15px;
+  padding: 10px;
   font-size: 15px;
+}
+.gratitude-container .gratitude-text {
+  text-align: center;
+}
+.attribution {
+  width: 90%;
+  position: relative;
+  top: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.attribution p {
+  margin: 10px 0;
+}
+.attribution a {
+  color: hsl(25, 97%, 53%);
+  padding: 0 -0.25em;
+  margin: 0 -0.25em;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0;
+  color: hsl(216, 12%, 54%);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.attribution a:hover,
+.attribution a:focus {
+  outline: thin dotted;
+  color: hsl(0, 0%, 100%);
+  box-shadow: inset 200px 0 0 0 hsl(25, 97%, 53%);
+}
+@media screen and (min-width: 768px) {
+  .attribution p {
+    display: inline;
+  }
 }
