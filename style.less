@@ -43,8 +43,14 @@ html {
       height: 85%;
     }
 
-    .gratitude-container {
-      display: none;
+    .heading {
+      font-size: 1.5em;
+    }
+
+    .text {
+      color: @Medium-Grey;
+      font-size: 15px;
+      text-align: center;
     }
   }
 }
@@ -80,7 +86,7 @@ html {
 /* RATING CARD */
 
 .rating-container {
-  display: flex;
+  display: none; // * change to flex later
   flex-direction: column;
   justify-content: space-between;
 
@@ -99,15 +105,6 @@ html {
       width: 14px;
       height: 14px;
     }
-  }
-
-  .heading {
-    font-size: 1.5em;
-  }
-
-  .text {
-    color: @Medium-Grey;
-    font-size: 14px;
   }
 
   .score-container {
@@ -163,5 +160,26 @@ html {
     &:active {
       transform: translateY(-10px);
     }
+  }
+}
+
+/* GRATITUDE CARD */
+
+.gratitude-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .phone-img {
+    width: 140px;
+  }
+
+  .selection {
+    background-color: @Circle-color;
+    border-radius: 50px;
+    color: @Orange;
+    padding: 10px 15px;
+    font-size: 15px;
   }
 }
