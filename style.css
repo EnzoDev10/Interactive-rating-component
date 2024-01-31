@@ -101,7 +101,7 @@ html main .text {
   appearance: none;
 }
 .rating-container #score-form .option input:checked + label {
-  background-color: hsl(25, 97%, 53%);
+  background-color: hsl(25, 96%, 39%);
 }
 .rating-container #score-form .option label {
   width: 40px;
@@ -113,7 +113,7 @@ html main .text {
   background-color: hsl(217, 12%, 63%);
 }
 .rating-container .btn {
-  background-color: hsl(25, 97%, 53%);
+  background-color: hsl(25, 96%, 39%);
   color: hsl(0, 0%, 100%);
   border: none;
   padding: 12px 0;
